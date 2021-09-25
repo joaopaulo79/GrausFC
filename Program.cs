@@ -6,27 +6,24 @@ namespace GrausFC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            double f, c;
+
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("===== Converter Fahrenheit em Celsius =====");
-            Console.WriteLine();
+            Console.WriteLine("\n===== Fahrenheit para Celsius =====\n");
             Console.ResetColor();
-            Console.WriteLine("Digite a temperatura em Fahrenheit, para");
-            Console.WriteLine("que eu possa converter em Celsius.");
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+            Console.WriteLine("Digite a temperatura em Fahrenheit,\npara converter em Celsius.\n");
+            
             Console.Write("Temperatura em Fahrenheit: ");
-            Console.ResetColor();
-            string Fahrenheit = Console.ReadLine();
-            double F = Convert.ToDouble(Fahrenheit);
-            double C = (F - 32) / 1.8;
-            Console.WriteLine();
+            f = Convert.ToDouble(Console.ReadLine());
+
+            c = (f - 32) / 1.8;
+
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("=== Conversão ===");
+            Console.WriteLine("\n=== Conversão ===\n");
             Console.ResetColor();
-            Console.WriteLine();
-            Console.WriteLine($"{F:N1}°F equivalem a {C:N1}°C.");
-            Console.WriteLine();
+            
+            Console.WriteLine($"{f}°F equivalem a {c:N1}°C.\n");
         }
     }
 }
